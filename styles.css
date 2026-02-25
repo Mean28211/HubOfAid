@@ -1,0 +1,37 @@
+/* HubOfAid - styles.css */
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  background:#f7fafc;
+  color:#0f172a;
+}
+.navbar{background:linear-gradient(90deg,#0ea5a3,#06b6d4);color:#fff;padding:12px 20px;box-shadow:0 2px 6px rgba(2,6,23,0.08)}
+.navbar-content{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1100px;margin:0 auto}
+.logo{margin:0;font-weight:700}
+.nav-menu{list-style:none;display:flex;gap:12px;margin:0;padding:0}
+.nav-menu li{display:inline}
+.nav-link{color:rgba(255,255,255,0.95);text-decoration:none;font-weight:600}
+.container{padding:20px;max-width:1100px;margin:18px auto}
+.view{margin-bottom:20px;background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(2,6,23,0.06)}
+.map-container{height:420px;border-radius:8px;overflow:hidden;border:1px solid rgba(2,6,23,0.04)}
+.filter-controls{margin-top:12px;display:flex;gap:8px}
+.btn-filter{padding:8px 12px;border:1px solid rgba(2,6,23,0.06);background:#fff;color:#0f172a;border-radius:8px;cursor:pointer}
+.btn-filter.active{background:linear-gradient(90deg,#06b6d4,#0891b2);color:#fff;border-color:transparent}
+.hidden{display:none!important}
+.btn-primary{padding:10px 14px;background:#0ea5a3;color:#fff;border:none;border-radius:8px;cursor:pointer}
+.scanner-video{width:100%;height:320px;background:#000;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.scanner-video video{width:100%;height:100%;object-fit:cover}
+.scan-result{margin-top:10px;padding:10px;border-radius:8px;background:#f1f5f9}
+.inventory-list{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.inventory-item{padding:12px;border:1px solid rgba(2,6,23,0.06);border-radius:8px;background:#fff;display:flex;flex-direction:column;gap:8px}
+.inventory-item .row{display:flex;justify-content:space-between;align-items:center}
+.qty{font-weight:700}
+.progress-low{color:#b91c1c;font-weight:700}
+.profile-card{padding:14px;border:1px solid rgba(2,6,23,0.06);border-radius:8px;display:inline-block;background:#fff}
+.footer{text-align:center;padding:12px;color:rgba(15,23,42,0.6);margin-top:14px}
+
+@media (max-width:640px){
+  .nav-menu{display:none}
+  .container{padding:12px}
+}

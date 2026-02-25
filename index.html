@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HubOfAid - Erste-Hilfe App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <h1 class="logo">HubOfAid</h1>
+                <ul class="nav-menu">
+                    <li><a href="#map" class="nav-link">Karte</a></li>
+                    <li><a href="#scanner" class="nav-link">Scanner</a></li>
+                    <li><a href="#inventory" class="nav-link">Bestand</a></li>
+                    <li><a href="#profile" class="nav-link">Profil</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container">
+            <!-- Kartenansicht -->
+            <section id="map" class="view">
+                <h2>Standorte</h2>
+                <div id="map-container" class="map-container">
+                    <!-- OpenStreetMap wird hier eingebunden -->
+                </div>
+                <div class="filter-controls">
+                    <button class="btn-filter" data-filter="aed">AED</button>
+                    <button class="btn-filter" data-filter="verbandkasten">Verbandkasten</button>
+                </div>
+            </section>
+
+            <!-- QR-Scanner -->
+            <section id="scanner" class="view hidden">
+                <h2>QR-Code Scanner</h2>
+                <button id="start-scanner" class="btn-primary">Scanner starten</button>
+                <div id="scanner-video" class="scanner-video hidden"></div>
+                <div id="scan-result" class="scan-result hidden">
+                    <p id="scan-text"></p>
+                </div>
+            </section>
+
+            <!-- Bestandsüberwachung -->
+            <section id="inventory" class="view hidden">
+                <h2>Bestandsüberwachung</h2>
+                <div id="inventory-list" class="inventory-list">
+                    <!-- Bestandseinträge werden hier eingefügt -->
+                </div>
+            </section>
+
+            <!-- Benutzer-Profil -->
+            <section id="profile" class="view hidden">
+                <h2>Mein Profil</h2>
+                <div class="profile-card">
+                    <p id="user-name">Benutzer</p>
+                    <p id="user-role">Rolle</p>
+                    <button id="logout-btn" class="btn-secondary">Abmelden</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 HubOfAid - Felix Tim Grosch</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
